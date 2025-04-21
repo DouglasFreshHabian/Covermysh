@@ -1,5 +1,5 @@
-# covermysh
-Contains Scripts that erase the command history and replace with fake commands.
+![carbon header pic](https://github.com/DouglasFreshHabian/covermysh/blob/main/Assets/covermysh.png)
+### Contains Scripts that erase the command history and replace with fake commands.
 
 ### Each script is designed to protect your privacy by earasing your history file, one for your bash history and the other for your fish history. It then replaces the the file with new, 'fake' commands, so anyone snooping onto
 your system will only find the fake commands. Each script already contains almost 400 fake commands which all come from the fake-commands.txt file. Each time the script is ran, 100 commands are randomly chosen and inserted into
