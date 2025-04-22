@@ -1,43 +1,125 @@
 ![carbon header pic](https://github.com/DouglasFreshHabian/covermysh/blob/main/Assets/covermysh.png)
-### Contains Scripts that erase the command history and replace with fake commands.
 
-### Each script is designed to protect your privacy by earasing your history file, one for your bash history and the other for your fish history. It then replaces the the file with new, 'fake' commands, so anyone snooping onto
-your system will only find the fake commands. Each script already contains almost 400 fake commands which all come from the fake-commands.txt file. Each time the script is ran, 100 commands are randomly chosen and inserted into
-the history file. main_script.sh is a script that comes with a list of options, allowing to essentially control both scripts from one. By choosing option 3, you can for example run both scripts and apply the changes to both your
-bash history file and your fish history file at once. 
+# CoverMySh: Protect Your Privacy by Obfuscating Your Shell History
 
-## [freshbash.sh](https://github.com/DouglasFreshHabian/covermysh/blob/main/freshbash.sh)
-### Script Summary: This script you've shared is designed to generate a fake .bash_history file, which could be used for various purposes like simulating activity or obfuscating real commands. 
-Key Features:
-* Color Definitions: It sets up color codes for terminal output to make the script more visually appealing.
-* History File: It specifies the path to the .bash_history file where the fake commands will be written.
-* Fake Commands List: A comprehensive array of system commands, including administrative ones, that will be randomly chosen to populate the history file.
-* Progress Bar: A function draw_progress_bar() is used to visualize the progress of the fake history generation in the terminal.
-* Fake History Generation: The generate_fake_history() function does the main work of generating fake bash history, appending random commands with timestamps.
+**CoverMySh** is a set of privacy-focused scripts designed to protect your command history from prying eyes. By clearing and replacing your Bash and Fish shell history with random, fake commands, this tool ensures that your terminal activity remains concealed. 
 
-## [freshfish.sh](https://github.com/DouglasFreshHabian/covermysh/blob/main/freshfish.sh)
-### Script Summary: This script creates a fake fish_history file for the Fish shell by generating a series of fake shell commands, adding them in Fish history format, and displaying a progress bar to indicate the creation progress.
-Breakdown:
-* Clears the existing Fish history file.
-* Generates 100 fake commands (modifiable by total_commands).
-* For each command, the script randomly selects a command from the FAKE_COMMANDS list and adds it to the fish_history file, in the format:
-  BEGIN   <timestamp>   <command>
-* It draws a progress bar after each command is added.
+### Features:
+🔹 **Erase Real Command History:** Completely clear your shell history files (`.bash_history` for Bash and `fish_history` for Fish).
+🔸 **Generate Fake History Entries:** Each script inserts random fake commands from an extensive pre-defined list, making it difficult for anyone to trace your actual activities.
+🔹 **Colorful & Engaging UI:** Enjoy a visually appealing interface with progress bars and color-coded output for a smooth user experience.
+🔸 **Automate with Cron Jobs:** Set up a cron job to periodically run the script and keep your history files up-to-date with new fake commands.
 
-## [main_script.sh](https://github.com/DouglasFreshHabian/covermysh/blob/main/main_script.sh)
-### Script Summary: This Bash script is a neat way to present a menu-driven interface for executing specific scripts (freshbash.sh and freshfish.sh), with colorful prompts and feedback.
-Features:
-* A simple menu with four options:
-  * Run freshbash.sh
-  * Run freshfish.sh
-  * Run both scripts
-  * Exit
-* Cron Job Reminder: After every action (script run or invalid choice), a reminder is shown about setting up a cron job, prompting the user to run random_cronjob.sh.
-## [random_cronjob.sh](https://github.com/DouglasFreshHabian/covermysh/blob/main/main_script.sh)
-### Script Summary: This Bash script creates a cron job that runs a given script at a random minute of every hour. It also includes nice color formatting for user feedback. Here's a quick breakdown of the script's functionality:
+---
 
-Key Functions:
+## 🚀 How It Works
 
-    - create_cron_job: This function creates the cron job using crontab, adding it to the user's cron schedule. It also gives feedback to the user with the color-coded messages.
+### **1. freshbash.sh**: Fake Bash History Generator
+This script is designed to obfuscate your **Bash history** by replacing the `.bash_history` file with fake commands. It randomly selects commands from a list of nearly 400 predefined fake commands and inserts them into your history.
 
-    - main: The main function that validates input and calls create_cron_job.
+**Key Features:**
+- 🎨 Color-coded output for better readability.
+- ⏳ Progress bar to show history generation status.
+- 🔑 Randomly adds fake administrative commands to your history for additional obscurity.
+- 📅 Timestamps are included to make the history appear natural.
+
+#### [freshbash.sh on GitHub](https://github.com/DouglasFreshHabian/covermysh/blob/main/freshbash.sh)
+
+---
+
+### **2. freshfish.sh**: Fake Fish Shell History Generator
+If you’re using the **Fish shell**, this script does the same thing for your `fish_history` file. It deletes your existing history and populates it with random fake commands formatted specifically for Fish shell.
+
+**Key Features:**
+- 💨 Clears out the existing Fish history before replacing it.
+- 🎭 Generates 100 fake commands (modifiable) in the Fish history format: `BEGIN <timestamp> <command>`.
+- 🏁 Progress bar keeps you updated on how far along the script is.
+- 🔐 Maintains your privacy by hiding your real shell activities.
+
+#### [freshfish.sh on GitHub](https://github.com/DouglasFreshHabian/covermysh/blob/main/freshfish.sh)
+
+---
+
+### **3. main_script.sh**: Unified Interface for All Scripts
+This is the main script that gives you a simple, interactive menu to control both `freshbash.sh` and `freshfish.sh`. You can run them separately or both at the same time, depending on your needs.
+
+**Menu Options:**
+1. 🚀 Run `freshbash.sh` to update Bash history.
+2. 🐟 Run `freshfish.sh` to update Fish shell history.
+3. ⚡ Run both scripts simultaneously for total coverage.
+4. ❌ Exit.
+
+After each action, you'll be reminded to set up a **cron job** to keep your history files automatically updated.
+
+#### [main_script.sh on GitHub](https://github.com/DouglasFreshHabian/covermysh/blob/main/main_script.sh)
+
+---
+
+### **4. random_cronjob.sh**: Automate Fake History Updates
+Use **random_cronjob.sh** to set up a cron job that runs one of the above scripts at a random minute every hour. This ensures that your history files are periodically obfuscated without manual intervention.
+
+**Key Features:**
+- 🕐 Schedule the script to run at random intervals.
+- 🔧 Set up the cron job easily using simple color-coded feedback.
+- ⏳ Keep your history files consistently updated with fresh fake commands.
+
+#### [random_cronjob.sh on GitHub](https://github.com/DouglasFreshHabian/covermysh/blob/main/main_script.sh)
+
+---
+
+## 🛠️ Installation & Usage
+
+1. **Clone this repository:**
+    ```bash
+    git clone https://github.com/DouglasFreshHabian/covermysh.git
+    cd covermysh
+    ```
+
+2. **Set up the scripts:**
+    - Give execution permissions to the scripts:
+      ```bash
+      chmod +x freshbash.sh freshfish.sh main_script.sh random_cronjob.sh
+      ```
+
+3. **Run the main script** to interact with all options:
+    ```bash
+    ./main_script.sh
+    ```
+
+4. **Set up a cron job** to automate the fake history generation:
+    - Run `random_cronjob.sh` to schedule periodic updates:
+      ```bash
+      ./random_cronjob.sh
+      ```
+
+---
+
+## ⚠️ Important Notes
+
+- **Ethical Considerations:** This tool is intended for privacy protection. Ensure that you’re not violating any terms of service or policies while using it.
+- **Permissions:** The scripts require write access to your history files (`.bash_history` for Bash and `fish_history` for Fish). Ensure you have the necessary permissions to run these scripts on your system.
+- **Cron Job:** The cron job can run scripts in the background periodically. Make sure you're comfortable with automating this process.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙋‍♂️ Contributing
+
+Feel free to submit pull requests or open issues if you have suggestions or improvements for **CoverMySh**. Contributions are always welcome!
+
+---
+
+## 📌 Acknowledgments
+
+- **Special thanks** to everyone who contributed to the development of this project and provided feedback.
+- This project was created with privacy in mind. Keep your activities secure and private!
+
+
+
+
+
