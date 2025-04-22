@@ -1,14 +1,28 @@
-![carbon header pic](https://github.com/DouglasFreshHabian/covermysh/blob/main/Assets/covermysh.png)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Maintained](https://img.shields.io/badge/Maintained-Yes-brightgreen.svg)
+![Shell Script](https://img.shields.io/badge/made%20with-bash-1f425f.svg)
+![Status](https://img.shields.io/badge/status-stable-success.svg)
+![Issues](https://img.shields.io/github/issues/DouglasFreshHabian/IPv6Shield)
+![Stars](https://img.shields.io/github/stars/DouglasFreshHabian/IPv6Shield?style=social)
+![IPv6](https://img.shields.io/badge/IPv6-Support%20Control-red.svg)
+![Sysctl](https://img.shields.io/badge/Sysctl-Hardening-yellow.svg)
+![Systemd](https://img.shields.io/badge/systemd-Compatible-blue.svg)
+<h1 align="center"> 
+ 🐚 CoverMySh™️
+</h1>
 
-# CoverMySh: Protect Your Privacy by Obfuscating Your Shell History
+![carbon header pic](https://github.com/DouglasFreshHabian/Covermysh/blob/main/Assets/carbon5.png)
+
+## 🛡🛠 Protect Your Privacy by Obfuscating Your Shell History
 
 **CoverMySh** is a set of privacy-focused scripts designed to protect your command history from prying eyes. By clearing and replacing your Bash and Fish shell history with random, fake commands, this tool ensures that your terminal activity remains concealed. 
 
-### Features:
-🔹 **Erase Real Command History:** Completely clear your shell history files (`.bash_history` for Bash and `fish_history` for Fish).
-🔸 **Generate Fake History Entries:** Each script inserts random fake commands from an extensive pre-defined list, making it difficult for anyone to trace your actual activities.
-🔹 **Colorful & Engaging UI:** Enjoy a visually appealing interface with progress bars and color-coded output for a smooth user experience.
-🔸 **Automate with Cron Jobs:** Set up a cron job to periodically run the script and keep your history files up-to-date with new fake commands.
+| Features                                    | Description
+| :------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------- |
+|🔹 `Erase Command History:`                  | Completely clear your shell history files (`.bash_history` for Bash and `fish_history` for Fish).                                            |
+|🔸 `Generate Fake Entries:`                  | Each script inserts random fake commands from an extensive pre-defined list, making it difficult for anyone to trace your actual activities. |
+|🔹 `Colorful & Engaging UI:`                 | Enjoy a visually appealing interface with progress bars and color-coded output for a smooth user experience.                                 |
+|🔸 `Automate Cron Jobs:`                     | Set up a cron job to periodically run the script and keep your history files up-to-date with new fake commands.                              |
 
 ---
 
@@ -71,26 +85,26 @@ Use **random_cronjob.sh** to set up a cron job that runs one of the above script
 
 1. **Clone this repository:**
     ```bash
-    git clone https://github.com/DouglasFreshHabian/covermysh.git
-    cd covermysh
+       git clone https://github.com/DouglasFreshHabian/covermysh.git
+       cd covermysh
     ```
 
 2. **Set up the scripts:**
-    - Give execution permissions to the scripts:
-      ```bash
+   Give execution permissions to the scripts:
+   ```bash
       chmod +x freshbash.sh freshfish.sh main_script.sh random_cronjob.sh
-      ```
+   ```
 
 3. **Run the main script** to interact with all options:
-    ```bash
-    ./main_script.sh
-    ```
+   ```bash
+     ./main_script.sh
+   ```
 
 4. **Set up a cron job** to automate the fake history generation:
-    - Run `random_cronjob.sh` to schedule periodic updates:
-      ```bash
+   Run `random_cronjob.sh` to schedule periodic updates:
+   ```bash
       ./random_cronjob.sh
-      ```
+   ```
 
 ---
 
@@ -102,15 +116,23 @@ Use **random_cronjob.sh** to set up a cron job that runs one of the above script
 
 ---
 
-## 📄 License
+## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License — use it freely in personal or commercial projects. Attribution appreciated but not required.
 
----
+## ✍️ Author
 
-## 🙋‍♂️ Contributing
+| Name:             | Description                                       |
+| :---------------- | :------------------------------------------------ |
+| Script:           | freshbash.sh, freshfish.sh, main_script.sh        |
+| Author:           | Douglas Habian                                    |
+| Version:          | 1.1                                               |
+| Repo:             | https://github.com/DouglasFreshHabian/Covermysh   |
 
-Feel free to submit pull requests or open issues if you have suggestions or improvements for **CoverMySh**. Contributions are always welcome!
+## 💬 Feedback & Contributions
+
+Got ideas, bug reports, or improvements?
+Feel free to open an issue or submit a pull request!
 
 ---
 
@@ -120,6 +142,23 @@ Feel free to submit pull requests or open issues if you have suggestions or impr
 - This project was created with privacy in mind. Keep your activities secure and private!
 
 
+### If you have not done so already, please head over to the channel and hit that subscribe button to show some support. Thank you!!!
 
+## 👍 [Stay Fresh](https://www.youtube.com/@DouglasHabian-tq5ck) 
+
+<!-- Reach out to me if you are interested in collaboration or want to contract with me for any of the following:
+	Building Github Pages
+	Creating Youtube Videos
+	Editing Youtube Videos
+	Youtube Thumbnail Creation
+	Anything Pertaining to Linux! -->
+
+<!-- 
+ _____              _       _____                        _          
+|  ___| __ ___  ___| |__   |  ___|__  _ __ ___ _ __  ___(_) ___ ___ 
+| |_ | '__/ _ \/ __| '_ \  | |_ / _ \| '__/ _ \ '_ \/ __| |/ __/ __|
+|  _|| | |  __/\__ \ | | | |  _| (_) | | |  __/ | | \__ \ | (__\__ \
+|_|  |_|  \___||___/_| |_| |_|  \___/|_|  \___|_| |_|___/_|\___|___/
+        dfresh@tutanota.com Fresh Forensics, LLC 2025 -->
 
 
